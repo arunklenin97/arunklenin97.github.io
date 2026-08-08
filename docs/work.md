@@ -1,25 +1,35 @@
 # Experience
 
-## Senior Associate Data Scientist
-**Commonwealth Bank of Australia — AI Labs** · 2024 – present
+## Commonwealth Bank of Australia — AI Labs
+
+### Data Scientist · Jul 2026 – present
+
+Knowledge representation, LLM fine-tuning, model compression, and agentic AI safety research.
+
+**Customer Privacy Protection: NER Fine-tuning & Model Compression**
+- Designed a synthetic data generation framework to fine-tune NER models for customer privacy detection
+- Merged fine-tuned model variants using model souping, and applied Viterbi decoding with custom loss functions to improve sequence-level accuracy
+- Used structured pruning and knowledge distillation to produce a compact, low-latency model with under 1% performance drop from the teacher model
+
+**Agentic System User-Vulnerability Research**
+- Built an end-to-end framework simulating vulnerability scenarios that arise while users interact with agentic systems on a primary task
+- Built an evaluation pipeline to assess a benchmark dataset of these scenarios
+- Studied frontier LLM behavior under different vulnerable circumstances as part of a responsible AI research effort
+
+### Senior Associate Data Scientist · 2024 – Jun 2026
 
 Applied research team covering LLM fine-tuning, agentic AI systems, and MLOps, with a focus on knowledge-representation-driven system design for downstream task performance.
 
-### Research & Modeling
+#### LLM Fine-tuning & Agentic Systems
 
 **EmbGen: Synthetic Data Generation Algorithm**
-- Lead author; manuscript under review at EMNLP 2026
 - Generates training data that captures concept relationships across documents
 - Outperformed existing baselines on internal benchmarks
+- Published as lead author; see [Publications](#publications)
 
 **Domain-Specific LLM Fine-tuning**
 - Fine-tuned open-source LLMs for financial-domain tasks, matching or exceeding frontier closed-source model quality on internal evaluations
 - Enabled production deployment of open-source models in place of external APIs
-
-**Lightweight NER via Synthetic Data & Distillation**
-- Built a synthetic data generation framework to fine-tune NER/PII detection models
-- Applied structured pruning and knowledge distillation from a larger teacher model
-- Delivered a lightweight model with substantially improved inference latency and minimal accuracy loss relative to the teacher
 
 **Semantic Drift Detection Framework**
 - Designed for deployed generative AI agents in production
@@ -34,15 +44,15 @@ Applied research team covering LLM fine-tuning, agentic AI systems, and MLOps, w
 - Joint project with an AI vendor
 - Improved vulnerable customer identification from near-zero to 89%
 
-### MLOps & Infrastructure
+#### MLOps & Infrastructure
 
-**Seven-Layer Modular Architecture**
+**Modular Architecture**
 - Designed a scalable object-oriented architecture for LLM fine-tuning
-- Standardized across three projects
+- Standardized across multiple projects
 
 **Automated End-to-End Training Pipeline**
 - AWS HyperPod deployment
-- Single-command pre-training → fine-tuning → inference → evaluation
+- Single-command pre-training to fine-tuning to inference to evaluation
 - Parallel job execution with structured logging
 
 **Experiment Tracking & Cloud Infrastructure**
@@ -95,6 +105,16 @@ Applied research team covering LLM fine-tuning, agentic AI systems, and MLOps, w
     - Automated PD-LGD aggregation for the retail portfolio
     - Validated ARIMAX models across 21 retail segments
     - Systemic factor estimation using Nelder-Mead optimization
+
+---
+
+## Publications
+
+**[EmbGen: Teaching with Reassembled Corpora](https://arxiv.org/abs/2605.19394)**
+Arun K Lenin, Kai Rouse, Andrea Nicastro, Anna Leontjeva
+Lead author · arXiv:2605.19394 · under review, EMNLP 2026
+
+A synthetic data generation algorithm for LLM fine-tuning that captures how concepts relate across a document rather than in isolation; outperformed existing baselines on internal benchmarks.
 
 ---
 
