@@ -1,3 +1,8 @@
+---
+hide:
+  - toc
+---
+
 # Arun K Lenin
 
 AI Scientist working on LLM fine-tuning, synthetic data generation, and agentic AI systems. Kaggle Grandmaster (Notebooks), ranked #34 globally.
