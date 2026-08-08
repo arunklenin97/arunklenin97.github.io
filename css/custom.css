@@ -1,0 +1,421 @@
+/* ============================================================
+   CSS VARIABLES & ROOT
+   ============================================================ */
+
+:root {
+  --md-sidebar-width: 12rem;
+}
+
+/* ============================================================
+   STICKY HEADER
+   ============================================================ */
+
+.md-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+
+.md-header[data-md-state="hide"] {
+  transform: none !important;
+}
+
+.md-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.md-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ============================================================
+   MAIN LAYOUT
+   ============================================================ */
+
+.md-main {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Fixed sidebar width — visible on tablet and desktop (>=768px).
+   On mobile (<768px), Material handles the sidebar as a toggleable drawer. */
+@media (min-width: 48em) {
+  .md-sidebar--primary {
+    width: var(--md-sidebar-width);
+    min-width: var(--md-sidebar-width);
+    max-width: var(--md-sidebar-width);
+    flex-shrink: 0;
+  }
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    width: var(--md-sidebar-width);
+    overflow-x: hidden;
+  }
+
+  .md-sidebar--primary .md-nav {
+    width: 100%;
+    max-width: var(--md-sidebar-width);
+    overflow-x: hidden;
+  }
+}
+
+/* Override Material's drawer behavior on tablet (768px–1220px).
+   Keep the sidebar visible and static instead of a hamburger drawer. */
+@media screen and (min-width: 48em) and (max-width: 76.1875em) {
+  .md-sidebar--primary {
+    position: static !important;
+    height: auto !important;
+    transform: none !important;
+    z-index: auto !important;
+  }
+
+  /* Hide hamburger toggle — sidebar is already visible */
+  label[for="__drawer"] {
+    display: none !important;
+  }
+
+  /* Hide backdrop overlay */
+  .md-overlay {
+    display: none !important;
+  }
+}
+
+/* Desktop nav links — slightly larger text for readability */
+.desktop-nav-links .md-nav__link {
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 0.05rem 0.5rem;
+}
+
+/* ============================================================
+   SIDEBAR PROFILE SECTION
+   ============================================================ */
+
+.profile-section {
+  text-align: center;
+  padding: 1.5rem 1.25rem;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  background: var(--md-code-bg-color);
+  border-radius: 4px;
+  margin: 0.5rem 0.5rem 1rem 0.5rem;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  border: 3px solid var(--md-primary-fg-color);
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: var(--md-default-fg-color);
+  white-space: nowrap;
+}
+
+.profile-title {
+  font-size: 0.9rem;
+  color: var(--md-primary-fg-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.profile-subtitle {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.profile-resume-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color) !important;
+  background: var(--md-accent-fg-color);
+  border-radius: 3px;
+  text-decoration: none !important;
+  transition: opacity 0.2s ease;
+}
+
+.profile-resume-link:hover {
+  opacity: 0.85;
+}
+
+/* ============================================================
+   SIDEBAR SECTIONS (Recent Posts, Contact, etc.)
+   ============================================================ */
+
+.sidebar-section {
+  padding: 1rem 0.75rem;
+  margin: 0.5rem 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.sidebar-section:first-of-type {
+  border-top: 2px solid var(--md-default-fg-color--lightest);
+  margin-top: 0.5rem;
+}
+
+.sidebar-section-title {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--md-default-fg-color);
+}
+
+.sidebar-section-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.sidebar-section-list li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-section-list a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+
+.sidebar-section-list a:hover {
+  background: var(--md-primary-fg-color--lightest);
+  color: var(--md-primary-fg-color);
+  padding-left: 0.75rem;
+}
+
+.sidebar-link-more {
+  color: var(--md-accent-fg-color) !important;
+  font-weight: 500;
+}
+
+/* ============================================================
+   PROJECT CARDS
+   ============================================================ */
+
+.project-card {
+  background: var(--md-code-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-color: var(--md-primary-fg-color);
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.project-card p {
+  margin: 0.5rem 0;
+  color: var(--md-default-fg-color--light);
+}
+
+/* ============================================================
+   BLOG STYLING
+   ============================================================ */
+
+.md-sidebar--post {
+  display: none;
+}
+
+.md-post__meta {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.post-metadata {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.9rem;
+}
+
+.category-tag {
+  display: inline-block;
+  background: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+}
+
+.blog-tags {
+  margin-top: 1rem;
+}
+
+.blog-tags a {
+  display: inline-block;
+  background: var(--md-accent-fg-color--lightest);
+  color: var(--md-accent-fg-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 16px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.blog-tags a:hover {
+  background: var(--md-accent-fg-color);
+  color: var(--md-default-bg-color);
+}
+
+.md-post--excerpt .post-date {
+  display: none;
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+
+.profile-title,
+.post-metadata,
+.sidebar-section-title {
+  color: var(--md-default-fg-color--light);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--md-primary-fg-color);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0b0b0b;
+  --md-default-fg-color: #ffffff;
+  --md-default-fg-color--light: #e6e6e6;
+  --md-default-fg-color--lighter: #cfcfcf;
+  --md-code-bg-color: #111111;
+  --md-code-fg-color: #ffffff;
+  --md-typeset-a-color: #ffd54f;
+}
+
+[data-md-color-scheme="slate"] .md-typeset {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+[data-md-color-scheme="slate"] .profile-section {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-md-color-scheme="slate"] .project-card {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ============================================================
+   RESPONSIVE - TABLET
+   ============================================================ */
+
+@media (max-width: 1219px) {
+  .profile-section {
+    padding: 1rem;
+    margin: 0.5rem 0.25rem 1rem 0.25rem;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile-name {
+    font-size: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .sidebar-section {
+    padding: 0.75rem 0.5rem;
+  }
+}
+
+/* ============================================================
+   RESPONSIVE - MOBILE ONLY (<768px)
+   ============================================================ */
+
+@media (max-width: 47.9375em) {
+
+  /* Hide profile card on mobile — hamburger drawer handles nav */
+  .profile-section {
+    display: none;
+  }
+
+  .profile-photo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.75rem;
+  }
+
+  .profile-name {
+    font-size: 0.95rem;
+  }
+
+  .profile-title {
+    font-size: 0.85rem;
+  }
+
+  .project-card {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+
+  .post-metadata {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sidebar-section {
+    padding: 0.5rem 0.25rem;
+  }
+
+  .sidebar-section-title {
+    font-size: 0.8rem;
+  }
+
+  .sidebar-section-list {
+    font-size: 0.8rem;
+  }
+}

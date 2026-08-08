@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Arun K Lenin - Resume</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --sub: #4a4a4a;
+    --rule: #d8d8d8;
+    --accent: #8a6d00;
+  }
+  * { box-sizing: border-box; }
+  html {
+    background: #e8e8e8;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Helvetica Neue", Arial, "Segoe UI", sans-serif;
+    color: var(--ink);
+    font-size: 10.3pt;
+    line-height: 1.32;
+  }
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    margin: 0.35in auto;
+    background: #fff;
+    padding: 0.5in 0.55in;
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+  }
+  header h1 {
+    font-size: 21pt;
+    margin: 0;
+    letter-spacing: 0.3px;
+  }
+  header .title {
+    font-size: 10.5pt;
+    color: var(--sub);
+    margin-top: 2px;
+  }
+  .contact {
+    text-align: right;
+    font-size: 9pt;
+    color: var(--sub);
+    line-height: 1.6;
+    white-space: nowrap;
+  }
+  .contact a { color: #1a5296; text-decoration: underline; }
+
+  .summary {
+    font-size: 10pt;
+    color: #222;
+    margin-bottom: 14px;
+  }
+
+  .layout::after { content: ""; display: table; clear: both; }
+  .side {
+    float: left;
+    width: 30%;
+  }
+  .main {
+    float: left;
+    width: 68%;
+    margin-left: 2%;
+  }
+
+  h2 {
+    font-size: 9.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    border-bottom: 1px solid var(--rule);
+    margin: 0 0 6px 0;
+    padding-bottom: 3px;
+  }
+  section { margin-bottom: 11px; }
+
+  /* Sidebar */
+  .side h3 {
+    font-size: 9.6pt;
+    margin: 0 0 2px 0;
+  }
+  .skill-group { margin-bottom: 6px; }
+  .skill-group .label {
+    font-weight: 600;
+    font-size: 9pt;
+    display: block;
+    margin-bottom: 1px;
+  }
+  .skill-group .items {
+    font-size: 8.9pt;
+    color: #333;
+  }
+
+  .edu-degree { font-weight: 600; font-size: 9.4pt; }
+  .edu-org { font-size: 9pt; color: var(--sub); }
+  .edu-year { font-size: 8.7pt; color: var(--sub); }
+
+  .kaggle-list { margin: 0; padding-left: 14px; font-size: 8.9pt; }
+  .kaggle-list li { margin-bottom: 3px; }
+
+  .leadership { font-size: 8.9pt; color: #333; }
+
+  /* Main column */
+  .role { margin-bottom: 13px; }
+  .role-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .role-title { font-weight: 700; font-size: 10.3pt; }
+  .role-org { font-size: 9.6pt; color: var(--sub); }
+  .role-date { font-size: 8.8pt; color: var(--sub); white-space: nowrap; }
+  .role-blurb { font-size: 9pt; color: var(--sub); font-style: italic; margin: 1px 0 4px 0; }
+  .role-org-name { font-weight: 700; font-size: 10.3pt; margin-bottom: 5px; }
+  .subrole { margin-bottom: 9px; }
+  .subrole + .subrole { border-top: 1px dotted var(--rule); padding-top: 7px; }
+
+  .subgroup { font-weight: 600; font-size: 9.1pt; margin: 6px 0 2px 0; }
+  ul.bullets {
+    margin: 0 0 2px 0;
+    padding-left: 15px;
+  }
+  ul.bullets li {
+    margin-bottom: 2.5px;
+    font-size: 9.1pt;
+  }
+
+  .pub-item { font-size: 9.1pt; margin-bottom: 4px; }
+  .pub-item .pub-status { color: var(--sub); }
+
+  @media print {
+    html, body { background: #fff; }
+    .page {
+      margin: 0;
+      box-shadow: none;
+      width: auto;
+      min-height: auto;
+      padding: 0.4in 0.5in;
+    }
+    @page { size: letter; margin: 0; background: #fff; }
+    a { color: inherit; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <h1>Arun K Lenin</h1>
+      <div class="title">AI Scientist · LLM Fine-tuning &amp; Agentic Systems · Kaggle Grandmaster</div>
+    </div>
+    <div class="contact">
+      Bengaluru, India<br>
+      <a href="mailto:arunkaaraparampil1997@gmail.com">arunkaaraparampil1997@gmail.com</a><br>
+      +91 9500194164<br>
+      <a href="https://linkedin.com/in/arunklenin">linkedin.com/in/arunklenin</a>
+    </div>
+  </header>
+
+  <div class="summary">
+    AI Scientist specializing in LLM fine-tuning, knowledge representation, and agentic AI systems, with production ML infrastructure experience on AWS. Kaggle Grandmaster (Notebooks), ranked #34 globally.
+  </div>
+
+  <div class="layout">
+
+    <!-- SIDEBAR -->
+    <div class="side">
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-group">
+          <span class="label">Languages</span>
+          <span class="items">Python, PySpark, R, SQL, MATLAB, Bash</span>
+        </div>
+        <div class="skill-group">
+          <span class="label">ML / Deep Learning</span>
+          <span class="items">LLM fine-tuning, knowledge representation, synthetic data generation, pruning &amp; knowledge distillation, model souping, NER/PII detection, ensemble methods, multimodal VLM fine-tuning, reinforcement learning</span>
+        </div>
+        <div class="skill-group">
+          <span class="label">NLP &amp; Evaluation</span>
+          <span class="items">RoBERTa, BERT, RAG, prompt engineering, LLM-as-judge evaluation</span>
+        </div>
+        <div class="skill-group">
+          <span class="label">Algorithms &amp; Statistics</span>
+          <span class="items">UMAP, HDBSCAN, Gaussian Processes, submodular optimization, drift detection</span>
+        </div>
+        <div class="skill-group">
+          <span class="label">Cloud &amp; MLOps</span>
+          <span class="items">AWS SageMaker, HyperPod, S3, IAM, KMS, Kubernetes, MLflow, distributed training</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu-degree">B.Tech, Chemical Engineering</div>
+        <div class="edu-org">Minor: Data Driven Modeling &amp; Systems Engineering</div>
+        <div class="edu-org">Indian Institute of Technology Madras</div>
+        <div class="edu-year">2020</div>
+      </section>
+
+      <section>
+        <h2>Research</h2>
+        <div class="pub-item">
+          <a href="https://arxiv.org/abs/2605.19394"><em>EmbGen: Teaching with Reassembled Corpora</em></a><br>
+          Synthetic data generation algorithm for LLM fine-tuning; captures cross-document concept relationships.<br>
+          <span class="pub-status">Lead author · arXiv:2605.19394 · under review, EMNLP 2026</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Competitive ML (Kaggle)</h2>
+        <ul class="kaggle-list">
+          <li>Grandmaster (Notebooks) - top ~300 globally</li>
+          <li>1st place - Insurance Cross Selling classification</li>
+          <li>2nd place globally - BitGrit NFT Prize Prediction</li>
+          <li>Four further top-10 finishes</li>
+          <li>Notebook held #1 public score on a competition for 2+ years - 19,000+ views, 4,000+ forks</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Leadership</h2>
+        <div class="leadership">
+          Designed and led a 3-week Gen AI hackathon for 30 graduate hires; mentored junior data scientists; hosted an internal speaker series (Stanford, UNSW).
+        </div>
+      </section>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="role">
+          <div class="role-org-name">Commonwealth Bank of Australia, AI Labs</div>
+
+          <div class="subrole">
+            <div class="role-head">
+              <span class="role-title">Data Scientist</span>
+              <span class="role-date">Jul 2026 - Present</span>
+            </div>
+            <div class="role-blurb">Knowledge representation, LLM fine-tuning, model compression, and agentic AI safety research.</div>
+            <ul class="bullets">
+              <li><strong>Customer privacy protection, NER fine-tuning and model compression:</strong> designed a synthetic data generation framework to fine-tune NER models for customer privacy detection; merged fine-tuned model variants using model souping and applied Viterbi decoding with custom loss functions to improve sequence-level accuracy; used structured pruning and knowledge distillation to produce a compact, low-latency model with under 1% performance drop from the teacher model.</li>
+              <li><strong>Agentic system user-vulnerability research:</strong> built an end-to-end framework simulating vulnerability scenarios that arise while users interact with agentic systems on a primary task, plus an evaluation pipeline to assess a benchmark dataset of these scenarios; studied frontier LLM behavior under different vulnerable circumstances as part of a responsible AI research effort.</li>
+            </ul>
+          </div>
+
+          <div class="subrole">
+            <div class="role-head">
+              <span class="role-title">Senior Associate Data Scientist</span>
+              <span class="role-date">2024 - Jun 2026</span>
+            </div>
+            <div class="role-blurb">Applied research team: LLM fine-tuning, agentic AI systems, MLOps.</div>
+
+            <div class="subgroup">LLM Fine-tuning &amp; Agentic Systems</div>
+            <ul class="bullets">
+              <li>Designed EmbGen, a synthetic data generation algorithm capturing cross-document concept relationships; outperformed existing baselines on internal benchmarks. Published as <em>"EmbGen: Teaching with Reassembled Corpora"</em> (arXiv:2605.19394), lead author; under review at EMNLP 2026.</li>
+              <li>Fine-tuned open-source LLMs for financial-domain tasks, matching or exceeding frontier closed-source model quality on internal evaluations, enabling production deployment of open-source models.</li>
+              <li>Designed a semantic drift detection framework for deployed Gen AI agents, combining embedding-based domain representation with LLM-scored retrieval; outperformed standard statistical drift methods.</li>
+              <li>Led an AI agent PoC for customer vulnerability identification with an external AI vendor, lifting correct identification from near-zero to 89%.</li>
+            </ul>
+
+            <div class="subgroup">MLOps &amp; Infrastructure</div>
+            <ul class="bullets">
+              <li>Designed a modular OO architecture for LLM fine-tuning, standardized across multiple projects.</li>
+              <li>Built an automated end-to-end training pipeline on AWS HyperPod, running pre-training, fine-tuning, inference, and evaluation from a single command with parallel job execution.</li>
+              <li>Integrated MLflow for reproducible experiment tracking; managed SageMaker, IAM, KMS, and S3; ran Kubernetes-based distributed training.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <span class="role-title">Senior Quantitative Model Solutions Specialist</span>
+            <span class="role-date">Jul 2022 - Jun 2024</span>
+          </div>
+          <div class="role-org">Wells Fargo</div>
+          <ul class="bullets">
+            <li>Built a Python tool for automated dashboard and PowerPoint generation of economic forecasts, with a UI for non-technical users - generating hundreds of slides within minutes.</li>
+            <li>Supported CCAR and Mid-Year Financial Assessment submissions for the PPNR model across six statistical forecast models; achieved a 90x efficiency gain through automation and integrated PSI monitoring into production controls.</li>
+            <li>Placed 9th globally (out of thousands of entries; 1 of 2 Indian teams in the top 10) in a customer attrition NLP challenge using RoBERTa, BERT, TF-IDF, and ensemble modeling.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head">
+            <span class="role-title">Manager 1, Risk Analytics</span>
+            <span class="role-date">Oct 2020 - Jun 2022</span>
+          </div>
+          <div class="role-org">ICICI Bank</div>
+          <ul class="bullets">
+            <li>Developed a master rating scale using K-means clustering for PD bin formation in the retail portfolio.</li>
+            <li>Built a statistical profiling model for sales hiring using AHP and Mahalanobis distance on PCA-derived personality traits.</li>
+            <li>Automated SME model monitoring (PSI/CSI analysis, WOE recomputation) and validated CECL PD-LGD and ARIMAX models across 21 retail segments.</li>
+          </ul>
+        </div>
+
+      </section>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
