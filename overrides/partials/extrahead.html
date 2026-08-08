@@ -1,0 +1,43 @@
+{% set safe_title = page.meta.title if (page and page.meta and 'title' in page.meta) else (page.title if (page and
+page.title) else config.site_name) %}
+{% set safe_desc = (page.meta.get('description', config.site_description) if (page and page.meta) else
+config.site_description) %}
+{% set safe_url = page.canonical_url if (page and page.canonical_url) else config.site_url %}
+
+<!-- Twitter Metadata -->
+<meta name="twitter:card" content="summary">
+
+<!-- Open Graph metadata -->
+<meta property="og:title" content="{{ safe_title }}">
+<meta property="og:description" content="{{ safe_desc }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ safe_url }}">
+<meta property="og:image" content="{{ config.site_url }}/image/profile.jpeg">
+<meta property="og:site_name" content="{{ config.site_name }}">
+
+<!-- Primary Schema.org metadata (Dynamic for all pages) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ safe_title }}",
+  "url": "{{ safe_url }}",
+  "description": "{{ safe_desc }}",
+  "author": {
+    "@type": "Person",
+    "name": "Arun Lenin",
+    "givenName": "Arun",
+    "familyName": "Lenin",
+    "url": "{{ config.site_url }}",
+    "jobTitle": "Machine Learning Researcher & Data Scientist",
+    "sameAs": [
+      "https://linkedin.com/in/arunklenin",
+      "https://github.com/arunklenin",
+      "https://www.kaggle.com/arunklenin"
+    ]
+  }
+}
+</script>
+
+<!-- Google Search Console Verification -->
+<meta name="google-site-verification" content="1c_Bp7h9hnn08rLATJxtE4CTv--jdJHKBi78xwwa3pU" />

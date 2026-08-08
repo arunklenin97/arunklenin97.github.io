@@ -1,0 +1,129 @@
+# ============================================================
+# PROJECT INFORMATION
+# ============================================================
+site_name: Arun Lenin
+site_url: https://arunklenin.github.io
+site_author: Arun Lenin
+site_description: Machine Learning Researcher | LLM Fine-tuning | Synthetic Data Generation | Kaggle Grandmaster
+
+copyright: "Copyright &copy; 2026 Arun Lenin"
+
+# ============================================================
+# BUILD CONFIGURATION
+# ============================================================
+docs_dir: docs
+site_dir: site
+
+# ============================================================
+# MARKDOWN EXTENSIONS
+# ============================================================
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: false
+      toc_depth: 4
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: python
+          class: python
+          format: !!python/name:pymdownx.superfences.fence_code_format
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+# ============================================================
+# THEME CONFIGURATION
+# ============================================================
+theme:
+  name: material
+  
+  custom_dir: overrides
+  
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: yellow
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: yellow
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  
+  font:
+    text: Lato
+    code: Roboto Mono
+
+  language: en
+  logo: image/logo.svg
+  favicon: image/logo.svg
+  
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
+    - content.tabs.link
+    - toc.follow
+
+# ============================================================
+# PLUGINS
+# ============================================================
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-_,:!=\[\]()"`/]+'
+
+# ============================================================
+# EXTRA CSS and JavaScript
+# ============================================================
+extra_css:
+  - css/custom.css
+  - css/extra.css
+
+# ============================================================
+# NAVIGATION STRUCTURE
+# ============================================================
+nav:
+  - About: index.md
+  - Work: work.md
+  - Kaggle: kaggle.md
+  - Contact: contact.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/arunklenin
+      name: GitHub
+    
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/arunklenin
+      name: LinkedIn
+    
+    - icon: fontawesome/brands/kaggle
+      link: https://www.kaggle.com/arunklenin
+      name: Kaggle
+    
+    - icon: fontawesome/solid/envelope
+      link: mailto:arunkaaraparampil1997@gmail.com
+      name: Email

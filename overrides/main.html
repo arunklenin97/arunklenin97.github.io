@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{#
+CUSTOM MATERIAL THEME OVERRIDE
+Adds profile section to top of navigation while preserving Material's layout.
+Uses proper sidebar wrapper for correct mobile drawer behavior.
+#}
+
+{% block extrahead %}
+  {{ super() }}
+  {% include "partials/extrahead.html" %}
+{% endblock %}
+
+{% block site_nav %}
+
+{# --- Primary sidebar (left navigation + profile) --- #}
+{% if nav %}
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
+
+      {# Profile card — hidden on mobile via CSS #}
+      <div class="profile-section">
+        <img src="{{ base_url }}/image/profile.jpeg" alt="Profile Photo" class="profile-photo"
+          onerror="this.style.display='none'">
+        <div class="profile-name">Arun Lenin</div>
+        <div class="profile-title">AI Researcher & Data Scientist</div>
+        <div class="profile-subtitle">📍 Bengaluru, India</div>
+        <a class="profile-resume-link" href="{{ base_url }}/resume/arun_lenin_resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+
+      <!-- {# Quick nav links — visible on laptop & tablet, hidden on mobile #}
+      <nav class="desktop-nav-links" style="padding: 0.5rem;">
+        <ul class="md-nav__list">
+          <li class="md-nav__item"><a href="{{ base_url }}/" class="md-nav__link">About</a></li>
+          <li class="md-nav__item"><a href="{{ base_url }}/work/" class="md-nav__link">Work</a></li>
+          <li class="md-nav__item"><a href="{{ base_url }}/article_of_the_day/" class="md-nav__link">Article of the
+              Day</a></li>
+          <li class="md-nav__item"><a href="{{ base_url }}/blog/" class="md-nav__link">Blog</a></li>
+          <li class="md-nav__item"><a href="{{ base_url }}/contact/" class="md-nav__link">Contact</a></li>
+        </ul>
+      </nav> -->
+
+      <!-- Main Navigation from nav config -->
+      {% include "partials/nav.html" %}
+
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# --- Secondary sidebar (right TOC) --- #}
+{% if page and page.toc and "toc" not in (page.meta.hide | default([])) %}
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+  <div class="md-sidebar__scrollwrap">
+    <div class="md-sidebar__inner">
+      {% include "partials/toc.html" %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% endblock %}
