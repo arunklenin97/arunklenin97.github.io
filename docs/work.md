@@ -1,6 +1,8 @@
 # Experience
 
-## Commonwealth Bank of Australia — AI Labs
+## :material-bank: Commonwealth Bank of Australia — AI Labs
+
+> :material-map-marker: _Bengaluru, India_
 
 ### Data Scientist · Jul 2026 – present
 
@@ -62,7 +64,9 @@ Applied research team covering LLM fine-tuning, agentic AI systems, and MLOps, w
 
 ---
 
-??? info "Wells Fargo — Senior Quantitative Model Solutions Specialist · July 2022 – June 2024"
+??? info ":material-finance: Wells Fargo — Senior Quantitative Model Solutions Specialist · July 2022 – June 2024"
+
+    > :material-map-marker: _Bengaluru, India_
 
     Quantitative modeling, economic forecasting, and production ML systems in financial risk.
 
@@ -83,7 +87,9 @@ Applied research team covering LLM fine-tuning, agentic AI systems, and MLOps, w
     - Applied RoBERTa, AllenNLP, TF-IDF, BERT, and topic modeling (Gensim)
     - Weighted ensemble models with balanced class weights on PCA components
 
-??? info "ICICI Bank — Manager 1, Risk Analytics · Oct 2020 – June 2022"
+??? info ":material-bank-outline: ICICI Bank — Manager 1, Risk Analytics · Oct 2020 – June 2022"
+
+    > :material-map-marker: _Mumbai, India_
 
     Risk modeling, statistical profiling, and production model monitoring for the retail portfolio.
 
