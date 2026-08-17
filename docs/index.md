@@ -6,9 +6,9 @@ hide:
 <div class="hero" markdown>
   <div class="hero-body" markdown>
 
-  <div class="hero-name">Arun K Lenin</div>
+  <h1 class="hero-name">Hello, I'm Arun K Lenin</h1>
 
-  <p class="hero-tagline">AI Scientist working on LLM fine-tuning, synthetic data generation, and agentic AI systems — building the bridge from research prototypes to production ML infrastructure.</p>
+  <p class="hero-tagline">I'm an AI Scientist working on LLM fine-tuning, synthetic data generation, and agentic AI systems — building the bridge from research prototypes to production ML infrastructure.</p>
 
   <div class="hero-stats">
     <span class="stat-chip"><strong>#34</strong> Kaggle Grandmaster, global</span>
