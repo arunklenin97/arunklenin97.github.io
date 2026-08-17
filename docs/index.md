@@ -4,7 +4,6 @@ hide:
 ---
 
 <div class="hero" markdown>
-  <img src="image/profile.jpeg" alt="Arun K Lenin" class="hero-photo" onerror="this.style.display='none'">
   <div class="hero-body" markdown>
 
   <div class="hero-name">Arun K Lenin</div>
